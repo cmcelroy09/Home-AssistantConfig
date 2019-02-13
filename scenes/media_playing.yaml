@@ -1,0 +1,11 @@
+### Media Playing
+
+  - name: media playing
+    entities:
+        light.living_room_lights:
+            state: off
+            transition: 2
+        light.living_room_accent:
+            state: on
+            transition: 2
+            brightness: 100

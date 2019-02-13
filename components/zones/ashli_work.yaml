@@ -1,0 +1,9 @@
+---
+# Zone for Ashli's Work
+#
+
+name: Work
+latitude: !secret ashli_work_lat
+longitude: !secret ashli_work_long
+radius: 250
+icon: mdi:briefcase

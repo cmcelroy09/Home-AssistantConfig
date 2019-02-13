@@ -1,0 +1,10 @@
+---
+# Adds an iframe panel to the Home Assistant frontend for the Pi-Hole add-on.
+# This allows me to access Pi-Hole straight from Home Asssitant's UI
+#
+# https://github.com/hassio-addons/addon-pi-hole#embedding-into-home-assistant
+# https://www.home-assistant.io/components/panel_iframe/
+pihole:
+  title: Pi-Hole
+  icon: mdi:block-helper
+  url: !secret pihole_url

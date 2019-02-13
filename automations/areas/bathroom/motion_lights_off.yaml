@@ -1,0 +1,17 @@
+---
+# Simple automation, that turns the lights off
+# after a certain amount of time.
+#
+
+alias: Bathroom Off
+trigger:
+  - platform: state
+    entity_id: binary_sensor.bathroom_motion
+    to: 'off'
+    for:
+      minutes: 3
+action:
+  - service: light.turn_off
+    entity_id:
+      - light.bathroom_1
+      - light.bathroom_2

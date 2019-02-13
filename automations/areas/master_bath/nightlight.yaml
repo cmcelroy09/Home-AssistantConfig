@@ -1,0 +1,22 @@
+---
+# Simple automation, that turns the lights on as
+# soon as someone has walked into our master bathroom.
+#
+
+alias: Master Bathroom Nightlight
+trigger:
+  - platform: state
+    entity_id: binary_sensor.master_bath_door
+    to: 'on'
+condition:
+  - condition: time
+    after: '20:00:00'
+    before: '08:00:00'
+  - condition: state
+    entity_id: group.family
+    state: 'home'
+action:
+  - service: light.turn_on
+    data:
+      brightness: 20
+      entity_id: light.master_bath

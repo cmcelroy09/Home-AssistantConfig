@@ -1,0 +1,27 @@
+---
+# Simple automation, that turns the lights off
+# after a certain amount of time.
+#
+
+alias: TV Doorbell Notification
+trigger:
+  - platform: state
+    entity_id: binary_sensor.ring_front_door_ding
+    from: 'off'
+    to: 'on'
+condition:
+  - condition: state
+    entity_id: remote.living_room_tv
+    state: 'on'
+  - condition: state
+    entity_id: group.family
+    state: 'home'
+action:
+  - service: notify.living_room_tv
+    data:
+      message: "There is someone at the front door"
+  - service: remote.send_command
+    data:
+      entity_id: remote.living_room_tv
+      command: Pause
+      device: 56512248

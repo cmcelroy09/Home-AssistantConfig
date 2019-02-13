@@ -1,0 +1,10 @@
+platform: template
+sensors:
+  shield_playing:
+    friendly_name: 'Shield Playing'
+    value_template: >-
+      {% if is_state("media_player.shield_tv", "paused")-%}
+        paused
+      {%- else -%}
+        {{ states("media_player.shield_tv") }}
+      {%- endif -%}

@@ -1,0 +1,21 @@
+alias: Hassio Snapshot
+trigger:
+  - platform: time
+    at: '03:00:00'
+action:
+  - service: hassio.snapshot_full
+    data_template:
+      name: Automated Backup {{ now().strftime('%m-%d-%Y') }}
+  - delay: '00:30:00'
+  - service: notify.pushbullet
+    data_template:
+      title: New Hass.io Backup
+      message: Created file is named "Automated Backup {{ now().strftime('%m-%d-%Y') }}"
+  - service: persistent_notification.create
+    data_template:
+      title: New Hass.io Backup
+      message: >-
+        There has been a Hass.io backup made!
+        Created file is named "Automated Backup {{ now().strftime('%m-%d-%Y') }}"
+      notification_id: hassio_backup
+  - service: rest_command.google_backup

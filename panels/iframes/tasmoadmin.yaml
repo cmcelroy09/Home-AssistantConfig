@@ -1,0 +1,8 @@
+---
+# Adds an iframe panel to the Home Assistant frontend for the TasmoAdmin add-on.
+# This allows me to access TasmoAdmin straight from Home Asssitant's UI
+#
+tasmoadmin:
+  title: TasmoAdmin
+  icon: mdi:lightbulb-on
+  url: !secret tasmoadmin_url

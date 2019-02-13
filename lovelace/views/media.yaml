@@ -1,0 +1,76 @@
+---
+
+title: Media
+icon: mdi:music-box-outline
+cards:
+  #
+  # - type: custom:compact-custom-header
+  #   header: true
+  #   menu: true
+  #   notification: true
+  #   voice: false
+  #   options: true
+  #   tabs: true
+  #   # clock: notification
+  #   # clock_format: 12
+  #   # clock_am_pm: true
+  #   disable: false
+  #   background_image: true
+
+  - type: entities
+    title: Music
+    show_header_toggle: false
+    entities:
+      - entity: media_player.home
+        type: custom:mini-media-player
+        group: true
+
+      - entity: media_player.workout_room
+        type: custom:mini-media-player
+        group: true
+
+      - entity: media_player.living_room_home
+        type: custom:mini-media-player
+        group: true
+        hide_controls: true
+        name: Google Home
+        show_tts: google
+
+      - entity: media_player.bedroom
+        type: custom:mini-media-player
+        group: true
+        hide_controls: true
+        name: Google Mini
+        show_tts: google
+
+  - type: horizontal-stack
+    cards:
+      - type: entities
+        entities:
+          - entity: input_select.living_room_tv
+          - entity: sensor.current_activity
+
+  - type: entities
+    entities:
+      - entity: media_player.plex
+        type: custom:mini-media-player
+<<<<<<< HEAD
+        name: Living Room Plex
+=======
+        name: Plex
+>>>>>>> 3bd4bbd63ba7eb46440aefe5adb4232c93e4b05b
+        artwork: cover
+        source: icon
+        hide:
+          volume: true
+          source: true
+          power_state: false
+      - entity: media_player.mibox_s
+        type: custom:mini-media-player
+        name: Bedroom Plex
+        artwork: cover
+        source: icon
+        hide:
+          volume: true
+          source: true
+          power_state: false

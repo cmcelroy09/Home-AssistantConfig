@@ -1,0 +1,58 @@
+---
+
+title: HA
+icon: mdi:server
+cards:
+
+  # - type: custom:compact-custom-header
+  #   header: true
+  #   menu: true
+  #   notification: true
+  #   voice: false
+  #   options: true
+  #   tabs: true
+  #   # clock: notification
+  #   # clock_format: 12
+  #   # clock_am_pm: true
+  #   disable: false
+  #   background_image: true
+
+  - type: horizontal-stack
+    cards:
+      - type: sensor
+        entity: sensor.processor_use
+        name: Processor
+        hours_to_show: 24
+        graph: line
+        detail: 1
+      - type: sensor
+        entity: sensor.memory_use_percent
+        name: Memory
+        hours_to_show: 24
+        graph: line
+        detail: 1
+
+  - type: vertical-stack
+    cards:
+      - type: glance
+        title: Server Load
+        entities:
+          - entity: sensor.load_1m
+            icon: mdi:speedometer
+          - entity: sensor.load_5m
+            icon: mdi:speedometer
+          - entity: sensor.load_15m
+            icon: mdi:speedometer
+
+  - type: glance
+    title: HA File Size
+    show_header_toggle: true
+    entities:
+      - entity: sensor.home_assistant_log
+        name: Log File
+      - entity: sensor.home_assistant_v2_db
+        name: Database
+      - entity: sensor.disk_use_percent
+        name: Disk Use
+        icon: mdi:harddisk
+    columns: 3

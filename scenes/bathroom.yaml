@@ -1,0 +1,24 @@
+#################################################################
+## Bathroom
+#################################################################
+  - name: bathroom_bright
+    entities:
+        light.bathroom_1:
+            state: on
+            transition: 2
+            brightness: 255
+        light.bathroom_2:
+            state: on
+            transition: 2
+            brightness: 255
+
+  - name: bathroom_dim
+    entities:
+        light.bathroom_1:
+            state: on
+            transition: 2
+            brightness: 40
+        light.bathroom_2:
+            state: on
+            transition: 2
+            brightness: 40

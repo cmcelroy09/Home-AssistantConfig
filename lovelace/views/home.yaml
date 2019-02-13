@@ -1,0 +1,65 @@
+---
+
+title: Home
+icon: mdi:home
+cards:
+  #
+  # - type: custom:compact-custom-header
+  #   header: true
+  #   menu: true
+  #   notification: true
+  #   voice: false
+  #   options: true
+  #   tabs: true
+  #   # clock: notification
+  #   # clock_format: 12
+  #   # clock_am_pm: true
+  #   disable: false
+  #   background_image: true
+
+  - type: horizontal-stack
+    cards:
+      - type: picture-entity
+        entity: device_tracker.chris_mcelroy
+        name: Chris
+        state_image:
+          "home": /local/pictures/chris.jpg
+          "not_home": /local/pictures/chris_bw.jpg
+          "Moving": /local/pictures/chris_bw.jpg
+          "Parents": /local/pictures/chris_bw.jpg
+          "Store": /local/pictures/chris_bw.jpg
+
+      - type: picture-entity
+        entity: device_tracker.ashli
+        name: Ashli
+        state_image:
+          "home": /local/pictures/ashli.jpg
+          "not_home": /local/pictures/ashli_bw.jpg
+          "Moving": /local/pictures/ashli_bw.jpg
+          "Parents": /local/pictures/ashli_bw.jpg
+          "Work": /local/pictures/ashli_bw.jpg
+          "Store": /local/pictures/ashli_bw.jpg
+
+  - type: weather-forecast
+    entity: weather.dark_sky
+    name: Byesville
+
+  - type: glance
+    entities:
+      - entity: sensor.living_room_temp
+        name: Living Room
+      - entity: sensor.office_temp
+        name: Office
+
+  - type: glance
+    entities:
+      - entity: sensor.living_room_humidity
+        name: Living Room
+      - entity: sensor.office_humidity
+        name: Office
+
+  - type: glance
+    entities:
+      - entity: input_boolean.alert_mode
+      - entity: input_boolean.guest_mode
+      - entity: input_boolean.speech_notifications

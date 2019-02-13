@@ -1,0 +1,10 @@
+platform: template
+sensors:
+  current_activity:
+    friendly_name: 'Current Activity'
+    value_template: >-
+      {%- if states.states.remote.living_room_tv != None -%}
+        {{ states.remote.living_room_tv.attributes.current_activity }}
+      {%- else -%}
+        unknown
+      {%- endif -%}

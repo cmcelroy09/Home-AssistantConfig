@@ -1,0 +1,9 @@
+---
+# Sets up Home Assistant.
+#
+# This fills in the homeassistant section of the main config file
+
+homeassistant:
+
+  # customize individual entities
+  customize: !include_dir_merge_named ../customizations/entities

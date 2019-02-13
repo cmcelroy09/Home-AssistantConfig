@@ -1,0 +1,9 @@
+---
+# Zone for store
+#
+
+name: Store
+latitude: !secret store_lat
+longitude: !secret store_long
+radius: 250
+icon: mdi:cart

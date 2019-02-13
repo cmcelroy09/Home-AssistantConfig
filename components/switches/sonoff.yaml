@@ -1,0 +1,10 @@
+---
+
+platform: mqtt
+name: "Test Sonoff"
+command_topic: "cmnd/tuya1/power"
+state_topic: "stat/tuya1/POWER"
+qos: 1
+payload_on: "ON"
+payload_off: "OFF"
+retain: true

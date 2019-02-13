@@ -1,0 +1,12 @@
+### Media Paused
+
+  - name: media paused
+    entities:
+        light.living_room_lights:
+            state: on
+            # transition: 2
+            brightness: 78
+        light.living_room_accent:
+            state: on
+            # transition: 2
+            brightness: 255

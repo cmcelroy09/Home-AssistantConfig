@@ -1,0 +1,20 @@
+---
+# Simple automation, that turns the lights on as
+# soon as someone has walked into our bathroom.
+#
+
+alias: Nightlight
+trigger:
+  - platform: state
+    entity_id: binary_sensor.bathroom_motion
+    to: 'on'
+condition:
+  - condition: time
+    after: '21:01:00'
+    before: '07:59:00'
+  - condition: state
+    entity_id: group.family
+    state: 'home'
+action:
+  - service: scene.turn_on
+    entity_id: scene.bathroom_dim

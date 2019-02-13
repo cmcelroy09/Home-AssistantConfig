@@ -1,0 +1,30 @@
+---
+# Simple automation, that turns the lights off
+# after a certain amount of time.
+#
+
+alias: Harmony
+trigger:
+  - platform: state
+    entity_id: input_select.living_room_tv
+    from: 'Select Input'
+action:
+  - service: remote.turn_on
+    entity_id: remote.living_room_tv
+    data_template:
+      activity: >
+        {% if is_state("input_select.living_room_tv", "Play Xbox") %}
+          37285419
+        {% elif is_state("input_select.living_room_tv", "Watch Shield TV") %}
+          35953191
+        {% elif is_state("input_select.living_room_tv", "Watch Fire TV") %}
+          37075755
+        {% elif is_state("input_select.living_room_tv", "Watch Bluray") %}
+          26679853
+        {% else %}
+        {% endif %}
+
+  - service: input_select.select_option
+    entity_id: input_select.living_room_tv
+    data_template:
+      option: "Select Input"

@@ -1,0 +1,8 @@
+---
+
+family:
+  name: family
+  view: false
+  entities:
+    - device_tracker.chris_mcelroy
+    - device_tracker.ashil

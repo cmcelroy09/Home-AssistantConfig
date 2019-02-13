@@ -1,0 +1,13 @@
+---
+# Harmony Hub from Logitech
+# This connects the hub with Home Assistant.
+#
+# https://www.home-assistant.io/components/remote.harmony/
+#
+
+remote:
+  - platform: harmony
+    name: Living Room TV
+    host: !secret harmony_host
+    port: !secret harmony_port
+    activity: Watch TV

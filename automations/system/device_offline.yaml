@@ -1,0 +1,23 @@
+alias: Notify if Device Goes Offline
+trigger:
+  - platform: state
+    entity_id:
+      - sensor.google_home
+      - sensor.googlehomemini
+      - sensor.harmony_hub
+      - sensor.shield
+      - sensor.philips_hue
+      - sensor.sonos
+      - sensor.ubiquiti
+condition:
+  - condition: template
+    value_template: "{% if trigger.from_state and trigger.to_state %} True {% else %} False {% endif %}"
+action:
+  - service: notify.pushbullet
+    data_template:
+      message: >
+        {% if trigger.to_state.state | lower == "offline" %}
+          {{ trigger.to_state.attributes.friendly_name }} has gone offline!
+        {% else %}
+          {{ trigger.to_state.attributes.friendly_name }} is back online!
+        {% endif %}

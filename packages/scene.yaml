@@ -1,0 +1,6 @@
+---
+# This loads up my custom Scenes.
+#
+# https://www.home-assistant.io/components/scene/
+#
+scene: !include_dir_list ../scenes

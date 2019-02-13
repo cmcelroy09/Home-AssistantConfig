@@ -1,0 +1,6 @@
+---
+# set global log level
+# and enable more fine tuned logging
+
+logger:
+  default: warn

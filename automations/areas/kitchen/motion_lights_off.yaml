@@ -1,0 +1,15 @@
+---
+# Simple automation, that turns the lights off
+# after a certain amount of time.
+#
+
+alias: Kitchen Lights Off
+trigger:
+  - platform: state
+    entity_id: binary_sensor.kitchen_motion
+    to: 'off'
+    for:
+      minutes: 3
+action:
+  - service: switch.turn_off
+    entity_id: switch.kitchen_lights

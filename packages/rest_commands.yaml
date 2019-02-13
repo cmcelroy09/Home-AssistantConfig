@@ -1,0 +1,6 @@
+---
+# This loads up my custom rest commands:
+#
+# https://www.home-assistant.io/components/rest_command/
+
+rest_command: !include ../rest_command.yaml

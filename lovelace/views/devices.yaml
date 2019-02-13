@@ -1,0 +1,89 @@
+title: Device Status
+icon: mdi:cellphone-iphone
+cards:
+
+  # - type: custom:compact-custom-header
+  #   header: true
+  #   menu: true
+  #   notification: true
+  #   voice: false
+  #   options: true
+  #   tabs: true
+  #   # clock: notification
+  #   # clock_format: 12
+  #   # clock_am_pm: false
+  #   disable: false
+  #   background_image: true
+
+  - type: vertical-stack
+    cards:
+      - type: glance
+        title: Chris's Phone Status
+        entities:
+          - entity: device_tracker.chris_mcelroy
+            name: GPS
+          - entity: sensor.chris_battery
+            name: Battery
+          - entity: sensor.pixel_charging
+            name: Charging?
+            icon: mdi:power-plug
+        columns: 3
+
+  - type: glance
+    title: Ashli's Phone Status
+    entities:
+      - entity: device_tracker.ashli
+        name: GPS
+      - entity: sensor.ashli_battery
+        name: Battery
+      - entity: sensor.ashli_charging
+        name: Charging?
+        icon: mdi:power-plug
+    columns: 3
+
+  - type: horizontal-stack
+    cards:
+      - type: sensor
+        entity: sensor.speedtest_download
+        name: Download
+        hours_to_show: 24
+        graph: line
+        detail: 1
+      - type: sensor
+        entity: sensor.speedtest_upload
+        name: Upload
+        hours_to_show: 24
+        graph: line
+        detail: 1
+
+  - type: entities
+    title: Batteries
+    show_header_toggle: false
+    entities:
+      - entity: sensor.downstairs_window_1_battery
+        icon: mdi:battery-50
+        name: Downstairs Window 1
+      - entity: sensor.downstairs_window_2_battery
+        icon: mdi:battery-50
+        name: Downstairs Window 2
+      - entity: sensor.downstairs_window_3_battery
+        icon: mdi:battery-50
+        name: Downstairs Window 3
+      - entity: sensor.front_door_lock_battery
+        icon: mdi:battery-50
+        name: Front Door Lock
+      - entity: sensor.mudroom_door_lock_battery
+        icon: mdi:battery-50
+        name: Mudroom Door Lock
+      - entity: sensor.hallway_motion_battery
+        icon: mdi:battery-50
+        name: Hallway Motion Sensor
+      - entity: sensor.kitchen_motion_battery
+        icon: mdi:battery-50
+        name: Kitchen Motion Sensor
+      - entity: sensor.patio_door_battery
+        icon: mdi:battery-50
+        name: Patio Door Sensor
+      - entity: sensor.ring_front_door_battery
+        icon: mdi:battery-50
+        name: Ring Doorbell

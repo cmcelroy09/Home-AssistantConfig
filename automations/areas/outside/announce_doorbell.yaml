@@ -1,0 +1,14 @@
+---
+# Simple automation, that turns the lights off
+# after a certain amount of time.
+#
+
+alias: Doorbell Annunciator
+trigger:
+  - platform: state
+    entity_id: binary_sensor.ring_front_door_ding
+    to: 'on'
+action:
+  - service: script.voice_notify
+    data_template:
+      value1: "Someone is at the front door"

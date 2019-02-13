@@ -1,0 +1,17 @@
+---
+# Provides a list of entities to include in Google Assistant.
+#
+# https://www.nabucasa.com/config/google_assistant
+#
+include_entities:
+  - light.living_room_lights
+  - light.living_room_accent
+  - light.ashli_nightstand
+  - light.chris_nightstand
+  - light.bedroom_lights
+  - switch.bedroom_fan
+  - switch.workout_fan
+  - lock.front_door
+  - lock.mudroom_door
+  - media_player.home
+  - media_player.workout_room

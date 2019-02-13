@@ -1,0 +1,15 @@
+---
+# Simple automation, that turns the lights off
+# after a certain amount of time.
+#
+
+alias: Porch light dims at 9pm
+trigger:
+  - platform: time
+    at: '21:00:00'
+action:
+  - service: light.turn_on
+    entity_id: light.porch_light
+    data:
+      brightness: 70
+      transition: 60

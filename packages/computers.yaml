@@ -1,0 +1,41 @@
+################################################################
+## Packages / Computers
+################################################################
+
+################################################
+## Customize
+################################################
+
+homeassistant:
+  customize:
+    switch.laptop_switch:
+      friendly_name: Laptop
+      icon: mdi:laptop
+
+    switch.ashlis_pc_switch:
+      friendly_name: Ashli's PC
+      icon: mdi:desktop-tower
+
+    switch.chriss_pc_switch:
+      friendly_name: Chris's PC
+      icon: mdi:desktop-tower
+
+################################################
+## Switch
+################################################
+switch:
+  - platform: wake_on_lan
+    name: Chris PC Switch
+    mac_address: "18:31:BF:B0:DD:3C"
+    host: 192.168.1.9
+    turn_off:
+        service: hassio.addon_stdin
+        data:
+            addon: core_rpc_shutdown
+            input: chris
+
+################################################
+## Shell Commands
+################################################
+# shell_command:
+#   chris_pc: net rpc shutdown -I 192.168.1.9 -U cmcelroy09%dubber99

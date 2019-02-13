@@ -1,0 +1,45 @@
+##########################################################
+## Party Lighting - Living Room
+##########################################################
+  - name: Living Room Party
+    entities:
+        light.living_room_1:
+          state: on
+          brightness: 255
+          effect: colorloop
+          transition: 5
+        light.living_room_2:
+          state: on
+          brightness: 255
+          effect: colorloop
+          transition: 5
+        light.living_room_3:
+          state: on
+          brightness: 255
+          effect: colorloop
+          transition: 5
+        light.living_room_4:
+          state: on
+          brightness: 255
+          effect: colorloop
+          transition: 5
+        light.bloom:
+          state: on
+          brightness: 255
+          effect: colorloop
+          transition: 5
+        light.bloom_2:
+          state: on
+          brightness: 255
+          effect: colorloop
+          transition: 5
+        light.bloom_3:
+          state: on
+          brightness: 255
+          effect: colorloop
+          transition: 5
+        light.hue_lightstrip_plus_1:
+          state: on
+          brightness: 255
+          effect: colorloop
+          transition: 5

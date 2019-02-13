@@ -1,0 +1,21 @@
+---
+# Simple automation, that turns the lights off
+# after a certain amount of time.
+#
+
+alias: notify if nest protect is not ok
+initial_state: 'on'
+trigger:
+  - platform: state
+    entity_id: sensor.downstairs_nest_protect_co_status,sensor.downstairs_nest_protect_smoke_status
+    to: 'emergency'
+action:
+  - service: notify.pushbullet
+    data:
+      message: 'Nest has detected Smoke or CO in the Living Room.'
+  - service: homeassistant.turn_on
+    entity_id: group.all_lights
+  - service: switch.turn_on
+    entity_id: switch.kitchen_lights
+  - service: switch.turn_on
+    entity_id: switch.office_fan

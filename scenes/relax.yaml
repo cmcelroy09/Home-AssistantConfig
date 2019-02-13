@@ -1,0 +1,37 @@
+##########################################################
+## Relax - Living Room
+##########################################################
+  - name: Living Room Relax
+    entities:
+        light.living_room_1:
+          state: on
+          brightness: 78
+          color_temp: 366
+        light.living_room_2:
+          state: on
+          brightness: 78
+          color_temp: 366
+        light.living_room_3:
+          state: on
+          brightness: 78
+          color_temp: 366
+        light.living_room_4:
+          state: on
+          brightness: 78
+          color_temp: 366
+        light.bloom:
+          state: on
+          brightness: 255
+          rgb_color: [8,85,255]
+        light.bloom_2:
+          state: on
+          brightness: 255
+          rgb_color: [255,64,216]
+        light.bloom_3:
+          state: on
+          brightness: 255
+          rgb_color: [255,64,216]
+        light.hue_lightstrip_plus_1:
+          state: on
+          brightness: 255
+          rgb_color: [63,79,255]

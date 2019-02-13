@@ -1,0 +1,14 @@
+---
+
+alias: Take out the trash
+trigger:
+  - platform: time
+    at: "19:00:00"
+condition:
+  - condition: time
+    weekday:
+      - thu
+action:
+  - service: script.voice_notify
+    data_template:
+      value1: "Don't forget to take out the trash"

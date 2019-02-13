@@ -1,0 +1,97 @@
+---
+
+title: Lighting
+icon: mdi:lightbulb
+cards:
+  # - type: custom:compact-custom-header
+  #   header: true
+  #   menu: true
+  #   notification: true
+  #   voice: false
+  #   options: true
+  #   tabs: true
+  #   # clock: notification
+  #   # clock_format: 12
+  #   # clock_am_pm: true
+  #   disable: false
+  #   background_image: true
+
+  - type: vertical-stack
+    cards:
+      - type: picture-glance
+        title: Bathroom
+        entities:
+          - light.bathroom_1
+          - light.bathroom_2
+        state_image:
+          "on": /local/pictures/bathroom.jpeg
+          "off": /local/pictures/bathroom_bw.jpg
+        entity: light.bathroom_1
+
+      - type: picture-glance
+        title: Bedroom
+        entities:
+          - light.bedroom_lights
+          - switch.bedroom_fan
+        state_image:
+          "on": /local/pictures/bedroom.jpg
+          "off": /local/pictures/bedroom_bw.jpg
+        entity: light.bedroom_lights
+
+      - type: picture-glance
+        title: Living Room
+        entities:
+          - light.living_room_lights
+          - light.living_room_accent
+          - switch.candle_warmer
+        state_image:
+          "on": /local/pictures/livingroom.jpg
+          "off": /local/pictures/livingroom_bw.jpg
+        entity: light.living_room_lights
+
+      - type: picture-glance
+        title: Kitchen
+        entities:
+          - switch.kitchen_lights
+          - light.lightstrip
+          - switch.kitchen_candle
+        state_image:
+          "on": /local/pictures/kitchen.jpeg
+          "off": /local/pictures/kitchen_bw.jpg
+        entity: switch.kitchen_lights
+
+      - type: picture-glance
+        title: Office
+        entities:
+          - light.office
+          - switch.office_fan
+          - switch.chris_pc_switch
+<<<<<<< HEAD
+          - switch.tuya1
+=======
+          - switch.test_sonoff
+>>>>>>> 3bd4bbd63ba7eb46440aefe5adb4232c93e4b05b
+        state_image:
+          "on": /local/pictures/imac.jpg
+          "off": /local/pictures/imac_bw.jpg
+        entity: switch.chris_pc_switch
+
+      - type: picture-glance
+        title: Exterior
+        entities:
+          - light.porch_light
+        state_image:
+          "on": /local/pictures/house.jpg
+          "off": /local/pictures/house_bw.jpg
+        entity: light.porch_light
+
+  - type: entities
+    title: Light Modes
+    show_header_toggle: false
+    entities:
+      - entity: scene.living_room_relax
+        name:  Relax Mode
+      - entity: scene.living_room_party
+        name:  Party Mode
+      - entity: scene.living_room_christmas
+        name:  Christmas Mode

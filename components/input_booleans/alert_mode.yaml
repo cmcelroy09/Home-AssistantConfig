@@ -1,0 +1,4 @@
+alert_mode:
+  name: Alert Mode
+  icon: mdi:alert-octagram
+  initial: off

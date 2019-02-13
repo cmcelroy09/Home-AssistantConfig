@@ -1,0 +1,9 @@
+alias: 'Webhook Call Service'
+initial_state: 'on'
+trigger:
+  platform: webhook
+  webhook_id: call_service
+action:
+  service_template: '{{ trigger.json.service }}'
+  data_template:
+    entity_id: '{{ trigger.json.entity_id }}'

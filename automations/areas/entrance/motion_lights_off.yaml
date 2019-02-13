@@ -1,0 +1,15 @@
+---
+# Simple automation, that turns the lights off
+# after a certain amount of time.
+#
+
+alias: Hallway Light Off
+trigger:
+  - platform: state
+    entity_id: binary_sensor.hallway_motion
+    to: 'off'
+    for:
+      seconds: 60
+action:
+  - service: light.turn_off
+    entity_id: light.hallway

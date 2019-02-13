@@ -1,0 +1,26 @@
+---
+# Simple automation, that turns the lights off
+# after a certain amount of time.
+#
+
+alias: Lights on at Sunset
+trigger:
+  - platform: sun
+    event: sunset
+    offset: "-00:10:00"
+condition:
+  - condition: state
+    entity_id: group.family
+    state: home
+action:
+  - service: light.turn_on
+    entity_id:
+      - light.living_room_1
+      - light.living_room_2
+      - light.living_room_3
+      - light.living_room_4
+      - light.lightstrip
+      - light.bloom
+      - light.bloom_2
+      - light.bloom_3
+      - light.hue_lightstrip_plus_1

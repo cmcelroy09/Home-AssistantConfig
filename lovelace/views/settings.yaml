@@ -1,0 +1,81 @@
+---
+
+title: Settings
+icon: mdi:information
+cards:
+
+  # - type: custom:compact-custom-header
+  #   header: true
+  #   menu: true
+  #   notification: true
+  #   voice: false
+  #   options: true
+  #   tabs: true
+  #   # clock: notification
+  #   # clock_format: 12
+  #   # clock_am_pm: true
+  #   disable: false
+  #   background_image: true
+
+  - type: entities
+    title: Home Assistant Stats
+    show_header_toggle: false
+    entities:
+      - entity: sensor.tracker_count
+        icon: mdi:cellphone-link
+        name: Number of Devices
+      - entity: sensor.lights_count
+        icon: mdi:lightbulb
+      - entity: sensor.binary_sensor_count
+        icon: mdi:nintendo-switch
+      # - entity: sensor.switch_count
+      #   icon: mdi:toggle-switch
+      - entity: sensor.automation_count
+        icon: mdi:home-assistant
+      - entity: sensor.script_count
+        icon: mdi:script-text-outline
+      - entity: sensor.sensor_count
+        icon: mdi:gauge
+      # - entity: sensor.zwave_count
+      #   icon: mdi:z-wave
+
+  - type: glance
+    title: Home Assistant Info
+    entities:
+      - entity: sensor.version_current
+        name: Installed
+        icon: mdi:folder-download
+      - entity: sensor.version_available
+        name: Latest Release
+        icon: mdi:github-circle
+    columns: 2
+
+  - type: custom:tracker-card
+    title:
+    trackers:
+      - sensor.custom_card_tracker
+      - sensor.custom_component_tracker
+
+  - type: custom:monster-card
+    show_empty: false
+    card:
+      type: entities
+      title: Lights On
+    filter:
+      include:
+        - domain: light
+          state: 'on'
+
+  - type: entities
+    title: Automations
+    show_header_toggle: false
+    entities:
+      - entity: group.all_automations
+
+  - type: entities
+    title: Tuya
+    show_header_toggle: false
+    entities:
+      - switch.tuya1
+      - switch.tuya2
+      - switch.tuya3

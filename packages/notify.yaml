@@ -1,0 +1,12 @@
+---
+# Notifications
+
+notify:
+  - platform: webostv
+    host: 192.168.1.34
+    name: living_room_tv
+    icon: "test.jpg"
+
+  - name: pushbullet
+    platform: pushbullet
+    api_key: !secret pushbullet_api_key

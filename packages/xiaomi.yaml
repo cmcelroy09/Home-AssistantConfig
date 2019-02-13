@@ -1,0 +1,16 @@
+---
+# Xiaomi Aqara is a smart home system by Xiaomi.
+# This connects up the Gateway with Home Assistant.
+#
+# https://www.home-assistant.io/components/xiaomi_aqara/
+#
+
+xiaomi_aqara:
+
+  # Number of times that Home Assistant should try to reconnect to the gateway.
+  discovery_retry: 10
+
+  # The list of Gateways to connect to.
+  gateways:
+    # Main gateway
+    - key: !secret xiaomi_key

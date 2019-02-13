@@ -1,0 +1,13 @@
+---
+# Light group: Living Room
+#
+# https://www.home-assistant.io/components/light.group/
+#
+
+platform: group
+name: Living Room Lights
+entities:
+  - light.living_room_1
+  - light.living_room_2
+  - light.living_room_3
+  - light.living_room_4

@@ -1,0 +1,18 @@
+---
+# Provides a list of entities to include in Amazon Alexa.
+#
+# https://www.nabucasa.com/config/amazon_alexa/
+#
+include_entities:
+  - light.living_room_lights
+  - light.living_room_accent
+  - light.ashli_nightstand
+  - light.chris_nightstand
+  - light.bedroom_lights
+  - media_player.home
+  - switch.bedroom_fan
+  - switch.kitchen_lights
+  - switch.office_fan
+  - switch.workout_fan
+  - lock.front_door
+  - lock.mudroom_door

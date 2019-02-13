@@ -1,0 +1,11 @@
+---
+# Light group: Bedroom
+#
+# https://www.home-assistant.io/components/light.group/
+#
+
+platform: group
+name: Bedroom Lights
+entities:
+  - light.ashli_nightstand
+  - light.chris_nightstand

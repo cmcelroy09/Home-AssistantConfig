@@ -1,0 +1,24 @@
+platform: template
+sensors:
+  windows_open:
+    device_class: window
+    friendly_name: "Windows Open"
+    value_template: >-
+      {{ is_state('binary_sensor.downstairs_window_1', 'on')
+          or is_state('binary_sensor.downstairs_window_2', 'on')
+          or is_state('binary_sensor.downstairs_window_3', 'on') }}
+
+  downstairs_window_1:
+    friendly_name: "Downstairs Window 1"
+    value_template: "{{ is_state('sensor.downstairs_window_1', '22') }}"
+    device_class: opening
+
+  downstairs_window_2:
+    friendly_name: "Downstairs Window 2"
+    value_template: "{{ is_state('sensor.downstairs_window_2', '22') }}"
+    device_class: opening
+
+  downstairs_window_3:
+    friendly_name: "Downstairs Window 3"
+    value_template: "{{ is_state('sensor.downstairs_window_3', '22') }}"
+    device_class: opening

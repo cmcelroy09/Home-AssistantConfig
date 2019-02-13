@@ -1,0 +1,37 @@
+##########################################################
+## Christmas Lighting - Living Room
+##########################################################
+  - name: Living Room Christmas
+    entities:
+        light.living_room_1:
+          state: on
+          brightness: 255
+          color_name: green
+        light.living_room_2:
+          state: on
+          brightness: 255
+          color_name: red
+        light.living_room_3:
+          state: on
+          brightness: 255
+          color_name: green
+        light.living_room_4:
+          state: on
+          brightness: 255
+          color_name: red
+        light.bloom:
+          state: on
+          brightness: 255
+          color_name: green
+        light.bloom_2:
+          state: on
+          brightness: 255
+          color_name: red
+        light.bloom_3:
+          state: on
+          brightness: 255
+          color_name: red
+        light.hue_lightstrip_plus_1:
+          state: on
+          brightness: 255
+          color_name: green

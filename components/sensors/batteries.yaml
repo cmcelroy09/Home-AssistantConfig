@@ -1,0 +1,226 @@
+platform: template
+sensors:
+  chris_battery:
+    friendly_name: Pixel Battery
+    value_template: "{{ state_attr('device_tracker.chris_mcelroy', 'battery') }}"
+    unit_of_measurement: '%'
+    device_class: battery
+
+  ashli_battery:
+    friendly_name: Pixel Battery
+    value_template: "{{ state_attr('device_tracker.ashli', 'battery') }}"
+    unit_of_measurement: '%'
+    device_class: battery
+
+  pixel_charging:
+    friendly_name: Pixel Charging Status
+    value_template: "{{ state_attr('device_tracker.chris_mcelroy', 'battery_charging') }}"
+
+  ashli_charging:
+    friendly_name: Pixel Charging Status
+    value_template: "{{ state_attr('device_tracker.ashli', 'battery_charging') }}"
+
+  front_door_lock_battery:
+    value_template: "{{ (states.zwave.schlage_be469_touchscreen_deadbolt.attributes|default).battery_level|default|int('unknown') }}"
+    unit_of_measurement: '%'
+    icon_template: >-
+      {% set battery_level = states('sensor.front_door_lock_battery')|int('unknown') %}
+      {% if battery_level == 'unknown' %}
+        mdi:battery-unknown
+      {% else %}
+        {% set battery_round = (battery_level|int / 10)|int * 10 %}
+        {% if battery_round >= 100 %}
+          mdi:battery
+        {% elif battery_round > 0 %}
+          mdi:battery-{{ battery_round }}
+        {% else %}
+          mdi:battery-alert
+        {% endif %}
+      {% endif %}
+
+  mudroom_door_lock_battery:
+    value_template: "{{ (states.zwave.schlage_be469_touchscreen_deadbolt_2.attributes|default).battery_level|default|int('unknown') }}"
+    unit_of_measurement: '%'
+    icon_template: >-
+      {% set battery_level = states('sensor.mudroom_door_lock_battery')|int('unknown') %}
+      {% if battery_level == 'unknown' %}
+        mdi:battery-unknown
+      {% else %}
+        {% set battery_round = (battery_level|int / 10)|int * 10 %}
+        {% if battery_round >= 100 %}
+          mdi:battery
+        {% elif battery_round > 0 %}
+          mdi:battery-{{ battery_round }}
+        {% else %}
+          mdi:battery-alert
+        {% endif %}
+      {% endif %}
+
+  kitchen_motion_battery:
+    value_template: "{{ (states.zwave.ecolink_motion_detector_3.attributes|default).battery_level|default|int('unknown') }}"
+    unit_of_measurement: '%'
+    icon_template: >-
+      {% set battery_level = states('sensor.kitchen_motion_battery')|int('unknown') %}
+      {% if battery_level == 'unknown' %}
+        mdi:battery-unknown
+      {% else %}
+        {% set battery_round = (battery_level|int / 10)|int * 10 %}
+        {% if battery_round >= 100 %}
+          mdi:battery
+        {% elif battery_round > 0 %}
+          mdi:battery-{{ battery_round }}
+        {% else %}
+          mdi:battery-alert
+        {% endif %}
+      {% endif %}
+
+  bedroom_motion_battery:
+    value_template: "{{ (states.zwave.bedroom_motion.attributes|default).battery_level|default|int('unknown') }}"
+    unit_of_measurement: '%'
+    icon_template: >-
+      {% set battery_level = states('sensor.bedroom_motion_battery')|int('unknown') %}
+      {% if battery_level == 'unknown' %}
+        mdi:battery-unknown
+      {% else %}
+        {% set battery_round = (battery_level|int / 10)|int * 10 %}
+        {% if battery_round >= 100 %}
+          mdi:battery
+        {% elif battery_round > 0 %}
+          mdi:battery-{{ battery_round }}
+        {% else %}
+          mdi:battery-alert
+        {% endif %}
+      {% endif %}
+
+  living_room_motion_battery:
+    value_template: "{{ (states.zwave.living_room_motion.attributes|default).battery_level|default|int('unknown') }}"
+    unit_of_measurement: '%'
+    icon_template: >-
+      {% set battery_level = states('sensor.living_room_motion_battery')|int('unknown') %}
+      {% if battery_level == 'unknown' %}
+        mdi:battery-unknown
+      {% else %}
+        {% set battery_round = (battery_level|int / 10)|int * 10 %}
+        {% if battery_round >= 100 %}
+          mdi:battery
+        {% elif battery_round > 0 %}
+          mdi:battery-{{ battery_round }}
+        {% else %}
+          mdi:battery-alert
+        {% endif %}
+      {% endif %}
+
+  hallway_motion_battery:
+    value_template: "{{ (states.zwave.ecolink_motion_detector.attributes|default).battery_level|default|int('unknown') }}"
+    unit_of_measurement: '%'
+    icon_template: >-
+      {% set battery_level = states('sensor.hallway_motion_battery')|int('unknown') %}
+      {% if battery_level == 'unknown' %}
+        mdi:battery-unknown
+      {% else %}
+        {% set battery_round = (battery_level|int / 10)|int * 10 %}
+        {% if battery_round >= 100 %}
+          mdi:battery
+        {% elif battery_round > 0 %}
+          mdi:battery-{{ battery_round }}
+        {% else %}
+          mdi:battery-alert
+        {% endif %}
+      {% endif %}
+
+  downstairs_window_1_battery:
+    value_template: "{{ (states.zwave.downstairs_window_1.attributes|default).battery_level|default|int('unknown') }}"
+    unit_of_measurement: '%'
+    icon_template: >-
+      {% set battery_level = states('sensor.downstairs_window_1_battery')|int('unknown') %}
+      {% if battery_level == 'unknown' %}
+        mdi:battery-unknown
+      {% else %}
+        {% set battery_round = (battery_level|int / 10)|int * 10 %}
+        {% if battery_round >= 100 %}
+          mdi:battery
+        {% elif battery_round > 0 %}
+          mdi:battery-{{ battery_round }}
+        {% else %}
+          mdi:battery-alert
+        {% endif %}
+      {% endif %}
+
+  downstairs_window_2_battery:
+    value_template: "{{ (states.zwave.vision_zd2102_eu_doorwindow_sensor.attributes|default).battery_level|default|int('unknown') }}"
+    unit_of_measurement: '%'
+    icon_template: >-
+      {% set battery_level = states('sensor.downstairs_window_2_battery')|int('unknown') %}
+      {% if battery_level == 'unknown' %}
+        mdi:battery-unknown
+      {% else %}
+        {% set battery_round = (battery_level|int / 10)|int * 10 %}
+        {% if battery_round >= 100 %}
+          mdi:battery
+        {% elif battery_round > 0 %}
+          mdi:battery-{{ battery_round }}
+        {% else %}
+          mdi:battery-alert
+        {% endif %}
+      {% endif %}
+
+  downstairs_window_3_battery:
+    value_template: "{{ (states.zwave.downstairs_window_3.attributes|default).battery_level|default|int('unknown') }}"
+    unit_of_measurement: '%'
+    icon_template: >-
+      {% set battery_level = states('sensor.downstairs_window_3_battery')|int('unknown') %}
+      {% if battery_level == 'unknown' %}
+        mdi:battery-unknown
+      {% else %}
+        {% set battery_round = (battery_level|int / 10)|int * 10 %}
+        {% if battery_round >= 100 %}
+          mdi:battery
+        {% elif battery_round > 0 %}
+          mdi:battery-{{ battery_round }}
+        {% else %}
+          mdi:battery-alert
+        {% endif %}
+      {% endif %}
+
+  patio_door_battery:
+    value_template: "{{ (states.zwave.patio_door.attributes|default).battery_level|default|int('unknown') }}"
+    unit_of_measurement: '%'
+    icon_template: >-
+      {% set battery_level = states('sensor.patio_door_battery')|int('unknown') %}
+      {% if battery_level == 'unknown' %}
+        mdi:battery-unknown
+      {% else %}
+        {% set battery_round = (battery_level|int / 10)|int * 10 %}
+        {% if battery_round >= 100 %}
+          mdi:battery
+        {% elif battery_round > 0 %}
+          mdi:battery-{{ battery_round }}
+        {% else %}
+          mdi:battery-alert
+        {% endif %}
+      {% endif %}
+
+  front_door_last_state:
+    friendly_name: Front Door Last Code
+    value_template: >-
+      {% if is_state('sensor.schlage_be469_touchscreen_deadbolt_alarm_type', '19') %}
+        {% if is_state('sensor.schlage_be469_touchscreen_deadbolt_alarm_level', '6') %}
+          Unlocked by Deprecated Group Code
+        {% elif is_state('sensor.schlage_be469_touchscreen_deadbolt_alarm_level', '1') %}
+          Unlocked by Chris
+        {% elif is_state('sensor.schlage_be469_touchscreen_deadbolt_alarm_level', '2') %}
+          Unlocked by Ashli
+        {% elif is_state('sensor.schlage_be469_touchscreen_deadbolt_alarm_level', '3') %}
+          Unlocked by Mom
+        {% else %}
+          Unlocked by an Untracked User Code
+        {% endif %}
+      {% elif is_state('sensor.schlage_be469_touchscreen_deadbolt_alarm_type', '18') %}
+        Locked via Outside Button
+      {% elif is_state('sensor.schlage_be469_touchscreen_deadbolt_alarm_type', '21') %}
+        Locked via Thumbturn
+      {% elif is_state('sensor.schlage_be469_touchscreen_deadbolt_alarm_type', '22') %}
+        Unlocked via Thumbturn
+      {% else %}
+        Unknown due to HA restart
+      {% endif %}

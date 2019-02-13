@@ -1,0 +1,12 @@
+---
+# Simple automation, that turns the lights off
+# after a certain amount of time.
+#
+
+alias: Turn off candle warmer at 8pm
+trigger:
+  - platform: time
+    at: '20:00:00'
+action:
+  - service: switch.turn_off
+    entity_id: switch.candle_warmer

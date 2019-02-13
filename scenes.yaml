@@ -1,0 +1,77 @@
+#################################################################
+## Scenes
+#################################################################
+  # - name: bathroom_bright
+  #   entities:
+  #       light.bathroom_1:
+  #           state: on
+  #           transition: 2
+  #           brightness: 255
+  #       light.bathroom_2:
+  #           state: on
+  #           transition: 2
+  #           brightness: 255
+  #
+  # - name: bathroom_dim
+  #   entities:
+  #       light.bathroom_1:
+  #           state: on
+  #           transition: 2
+  #           brightness: 40
+  #       light.bathroom_2:
+  #           state: on
+  #           transition: 2
+  #           brightness: 40
+
+  # - name: Hallway
+  #   entities:
+  #       light.hallway:
+  #           state: on
+  #           transition: 1
+  #           brightness: 255
+
+# ##########################################################
+# ## Party Lighting - Living Room
+# ##########################################################
+#   - name: Living Room Party
+#     entities:
+#       light.living_room_1:
+#         state: on
+#         brightness_pct: 100
+#         effect: colorloop
+#         transition: 5
+#       light.living_room_2:
+#         state: on
+#         brightness_pct: 100
+#         effect: colorloop
+#         transition: 5
+#       light.living_room_3:
+#         state: on
+#         brightness_pct: 100
+#         effect: colorloop
+#         transition: 5
+#       light.living_room_4:
+#         state: on
+#         brightness_pct: 100
+#         effect: colorloop
+#         transition: 5
+#       light.bloom:
+#         state: on
+#         brightness_pct: 100
+#         effect: colorloop
+#         transition: 5
+#       light.bloom_2:
+#         state: on
+#         brightness_pct: 100
+#         effect: colorloop
+#         transition: 5
+#       light.bloom_3:
+#         state: on
+#         brightness_pct: 100
+#         effect: colorloop
+#         transition: 5
+#       light.hue_lightstrip_plus_1:
+#         state: on
+#         brightness_pct: 100
+#         effect: colorloop
+#         transition: 5

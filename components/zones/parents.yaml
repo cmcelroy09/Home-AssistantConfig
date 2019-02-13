@@ -1,0 +1,9 @@
+---
+# Zone for parents
+#
+
+name: Parents House
+latitude: !secret parents_lat
+longitude: !secret parents_long
+radius: 250
+icon: mdi:home

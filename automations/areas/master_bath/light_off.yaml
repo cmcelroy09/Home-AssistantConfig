@@ -1,0 +1,13 @@
+---
+# Simple automation, that turns the lights off
+# in our master bathroom.
+#
+
+alias: Master Bathroom Off
+trigger:
+  - platform: state
+    entity_id: binary_sensor.master_bath_door
+    to: 'off'
+action:
+  - service: light.turn_off
+    entity_id: light.master_bath

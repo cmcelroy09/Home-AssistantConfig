@@ -1,0 +1,26 @@
+platform: template
+sensors:
+    google_home:
+      friendly_name: 'Google Home'
+      value_template: "{{ 'Online' if is_state('device_tracker.google_home', 'home') else 'Offline' }}"
+    googlehomemini:
+      friendly_name: 'Google Home Mini'
+      value_template: "{{ 'Online' if is_state('device_tracker.googlehomemini', 'home') else 'Offline' }}"
+    xiaomi:
+      friendly_name: 'Xiaomi Hub'
+      value_template: "{{ 'Online' if is_state('device_tracker.xiaomi', 'home') else 'Offline' }}"
+    harmony_hub:
+      friendly_name: 'Harmony Hub'
+      value_template: "{{ 'Online' if is_state('device_tracker.harmony_hub', 'home') else 'Offline' }}"
+    shield:
+      friendly_name: 'Nvidia Shield'
+      value_template: "{{ 'Online' if is_state('device_tracker.shield', 'home') else 'Offline' }}"
+    philips_hue:
+      friendly_name: 'Hue Hub'
+      value_template: "{{ 'Online' if is_state('device_tracker.philips_hue', 'home') else 'Offline' }}"
+    ubiquiti:
+      friendly_name: 'Unifi AP'
+      value_template: "{{ 'Online' if is_state('device_tracker.ubiquiti', 'home') else 'Offline' }}"
+    printer:
+      friendly_name: 'Printer'
+      value_template: "{{ 'Online' if is_state('device_tracker.printer', 'home') else 'Offline' }}"

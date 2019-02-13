@@ -1,0 +1,10 @@
+platform: template
+sensors:
+  netflix:
+    friendly_name: 'Netflix Playing'
+    value_template: >-
+      {% if states.media_player.shield_tv %}
+        {{ state_attr('media_player.shield_tv', 'app_name') }}
+      {% else %}
+        ??
+      {% endif %}

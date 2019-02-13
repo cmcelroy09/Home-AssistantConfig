@@ -1,0 +1,43 @@
+---
+
+title: Security
+icon: mdi:security
+cards:
+
+  # - type: custom:compact-custom-header
+  #   header: true
+  #   menu: true
+  #   notification: true
+  #   voice: false
+  #   options: true
+  #   tabs: true
+  #   # clock: notification
+  #   # clock_format: 12
+  #   # clock_am_pm: true
+  #   disable: false
+  #   background_image: true
+
+  - type: glance
+    entities:
+      - entity: lock.front_door
+        name: Front Door
+        tap_action:
+          action: toggle
+      - entity: lock.mudroom_door
+        name: Mudroom Door
+        tap_action:
+          action: toggle
+
+  - type: glance
+    entities:
+      - entity: binary_sensor.doors_open
+        name: Doors
+      - entity: binary_sensor.windows_open
+        name: Windows
+      - entity: binary_sensor.motion_detected
+        name: Motion
+
+  - type: picture-glance
+    title: Front Door
+    entities: []
+    camera_image: camera.front_door

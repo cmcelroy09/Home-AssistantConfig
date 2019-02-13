@@ -1,0 +1,18 @@
+---
+# Simple automation, that turns the lights off
+# after a certain amount of time.
+#
+
+alias: Mailbox Opened
+trigger:
+  - platform: state
+    entity_id:
+      - binary_sensor.mailbox
+    to: 'on'
+action:
+  - service: notify.pushbullet
+    data:
+      message: "The mail has arrived"
+  - service: notify.ios_iphone_ashli
+    data:
+      message: "The mail has arrived"

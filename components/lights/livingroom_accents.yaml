@@ -1,0 +1,13 @@
+---
+# Light group: Living Room Accents
+#
+# https://www.home-assistant.io/components/light.group/
+#
+
+platform: group
+name: Living Room Accent
+entities:
+  - light.bloom
+  - light.bloom_2
+  - light.bloom_3
+  - light.hue_lightstrip_plus_1
