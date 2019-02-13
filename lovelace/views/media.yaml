@@ -54,11 +54,7 @@ cards:
     entities:
       - entity: media_player.plex
         type: custom:mini-media-player
-<<<<<<< HEAD
         name: Living Room Plex
-=======
-        name: Plex
->>>>>>> 3bd4bbd63ba7eb46440aefe5adb4232c93e4b05b
         artwork: cover
         source: icon
         hide:

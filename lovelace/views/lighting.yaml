@@ -66,11 +66,7 @@ cards:
           - light.office
           - switch.office_fan
           - switch.chris_pc_switch
-<<<<<<< HEAD
           - switch.tuya1
-=======
-          - switch.test_sonoff
->>>>>>> 3bd4bbd63ba7eb46440aefe5adb4232c93e4b05b
         state_image:
           "on": /local/pictures/imac.jpg
           "off": /local/pictures/imac_bw.jpg
