@@ -63,4 +63,3 @@ cards:
       - entity: input_boolean.alert_mode
       - entity: input_boolean.guest_mode
       - entity: input_boolean.speech_notifications
-      - entity: switch.tuya
