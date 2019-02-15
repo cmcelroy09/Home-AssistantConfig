@@ -9,16 +9,16 @@
 #
 resources:
 ########################################
-  - url: /local/tracker-card.js?v=0.3.0
+  - url: /local/tracker-card.js?v=0.3.2
     type: js
 ########################################
   - url: /local/monster-card.js?v=0.2.3
     type: js
 ########################################
-  - url: /local/mini-media-player-bundle.js?v=1.0.0
+  - url: /local/mini-media-player-bundle.js?v=1.0.1
     type: module
 ########################################
-  - url: /local/mini-graph-card-bundle.js?v=0.2.2
+  - url: /local/mini-graph-card-bundle.js?v=0.2.4
     type: module
 ########################################
   - url: /local/surveillance-card.js?v=0.0.1
