@@ -1,6 +1,6 @@
 ---
-# Simple automation, that turns the lights off
-# after a certain amount of time.
+#
+#
 #
 
 alias: Hallway Light On

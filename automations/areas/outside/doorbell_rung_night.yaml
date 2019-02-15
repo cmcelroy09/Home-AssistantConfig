@@ -1,6 +1,6 @@
 ---
-# Simple automation, that turns the lights off
-# after a certain amount of time.
+#
+#
 #
 
 alias: Doorbell - Turn Exterior Lights to 100% when Rung after 9:00PM
